@@ -23,7 +23,8 @@ window.CONFIG = {
   "fila": {
     "pedidos": 2,
     "prazo": "2 a 4 dias",
-    "atualizado": "2026-11-22"
+    "atualizado": "2026-11-23"
   },
   "maxCoresMulticor": 4
 };
+
