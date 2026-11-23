@@ -1,10 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#e8611a"/>
-  <g fill="#ffffff" transform="translate(8 8) scale(0.75)">
-    <rect x="38" y="6"  width="10" height="8" rx="4"/>
-    <rect x="31" y="17" width="21" height="8" rx="4"/>
-    <rect x="23" y="28" width="32" height="8" rx="4"/>
-    <rect x="14" y="39" width="44" height="8" rx="4"/>
-    <rect x="4"  y="50" width="56" height="8" rx="4"/>
+  <!-- Favicon: o mesmo bloco, um pouco maior para ficar nítido em 16 px -->
+  <g transform="translate(-4.67 -4.67) scale(1.146)">
+    <polygon fill="#f7a26c" points="32,4 56,18 32,32 8,18"/>
+    <g fill="#e8611a">
+      <polygon points="8,18 32,32 32,40 8,26"/>
+      <polygon points="8,28 32,42 32,50 8,36"/>
+      <polygon points="8,38 32,52 32,60 8,46"/>
+    </g>
+    <g fill="#b44a12">
+      <polygon points="32,32 56,18 56,26 32,40"/>
+      <polygon points="32,42 56,28 56,36 32,50"/>
+      <polygon points="32,52 56,38 56,46 32,60"/>
+    </g>
   </g>
 </svg>
