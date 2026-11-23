@@ -74,17 +74,6 @@ window.MODELOS = [
       "PETG"
     ],
     "foto": "images/modelos/suporte-headset-mwtpwjfp.jpg"
-  },
-  {
-    "id": "porta-cartoes",
-    "nome": "Porta-cartões",
-    "descricao": "Porta-cartões de visita para balcão.",
-    "precoAPartirDe": 12,
-    "status": "estoque",
-    "materiais": [
-      "PLA"
-    ],
-    "foto": "images/modelos/porta-cartoes.jpg"
   }
 ];
 
