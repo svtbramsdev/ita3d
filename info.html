@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' file:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' file: data: blob:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self' file:">
+  <title>Informações · Ita 3D</title>
+  <meta name="description" content="Sobre a Ita 3D, como funciona a impressão 3D, materiais, contato e suporte.">
+  <link rel="icon" href="images/logo/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container brand">
+      <a href="index.html"><div class="brand-name">Ita <span>3D</span></div></a>
+      <p class="brand-sub">Serviços de impressão 3D · Itabira e região</p>
+    </div>
+  </header>
+  <nav class="site-nav" aria-label="Principal">
+    <ul class="container">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="modelos.html">Modelos</a></li>
+      <li><a href="enviar.html">Enviar</a></li>
+      <li><a href="pedido.html">Meu pedido</a></li>
+      <li><a href="info.html">Informações</a></li>
+    </ul>
+  </nav>
+
+  <main class="container section">
+    <div class="info-layout">
+      <nav class="toc" aria-label="Nesta página">
+        <a href="#sobre">Sobre nós</a>
+        <a href="#impressao">Impressão 3D</a>
+        <a href="#materiais">Materiais</a>
+        <a href="#qualidade">Qualidade</a>
+        <a href="#pedidos">Pedidos e prazos</a>
+        <a href="#contato">Contato</a>
+        <a href="#suporte">Reclamações</a>
+      </nav>
+
+      <div class="prose">
+        <!-- EDITE os textos desta página à vontade -->
+        <section id="sobre">
+          <h2>Sobre nós</h2>
+          <p>A Ita 3D é um serviço de impressão 3D sob demanda em Itabira. A ideia é simples: muita gente tem um projeto, uma peça quebrada ou uma ideia de presente, mas não tem uma impressora 3D em casa. A gente imprime para você.</p>
+          <p>Trabalhamos com uma Bambu Lab A1 com sistema multicor (AMS lite), que imprime peças de até 25,6 × 25,6 × 25,6 cm em até 4 cores.</p>
+        </section>
+
+        <section id="impressao">
+          <h2>Impressão 3D</h2>
+          <p>A impressora derrete um fio de plástico (o filamento) e monta a peça camada por camada, de baixo para cima. Por isso dá para fazer formatos que seriam difíceis de produzir de outro jeito, em uma unidade só e sem molde.</p>
+          <h3>Que arquivo eu preciso?</h3>
+          <p>Um modelo 3D nos formatos <strong>STL</strong>, <strong>3MF</strong>, <strong>OBJ</strong> ou <strong>STEP</strong>. Você pode baixar modelos prontos em sites como Printables, MakerWorld ou Thingiverse, ou criar o seu no Tinkercad (gratuito). Não tem arquivo? Mande uma foto e as medidas, e a gente avalia.</p>
+          <h3>Limitações</h3>
+          <ul>
+            <li>As camadas ficam levemente visíveis, principalmente em superfícies curvas.</li>
+            <li>Partes "no ar" precisam de suportes, que deixam pequenas marcas ao serem removidos.</li>
+            <li>Peças maiores que a área de impressão precisam ser divididas e coladas.</li>
+          </ul>
+        </section>
+
+        <section id="materiais">
+          <h2>Materiais</h2>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Material</th><th>Indicado para</th><th>Situação</th></tr></thead>
+              <tbody id="mat-table"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="qualidade">
+          <h2>Qualidade</h2>
+          <h3>Resolução (altura da camada)</h3>
+          <p>Quanto mais fina a camada, mais lisa e detalhada a peça, mas mais tempo ela leva. <strong>Alta</strong> (0,12 mm) para miniaturas e detalhes, <strong>Média</strong> (0,20 mm) para a maioria das peças, <strong>Baixa</strong> (0,28 mm) para peças grandes e simples.</p>
+          <h3>Preenchimento (infill)</h3>
+          <p>Por dentro, a peça não é maciça: tem uma estrutura em grade. <strong>Peças ornamentais</strong> usam pouco preenchimento (mais leves e baratas). <strong>Peças funcionais</strong> usam mais paredes e preenchimento para aguentar esforço.</p>
+          <h3>Multicor</h3>
+          <p>Imprimimos até 4 cores na mesma peça. A troca de cor gasta material extra e aumenta o tempo, então peças multicor custam um pouco mais. Você nos diz qual parte vai em cada cor.</p>
+        </section>
+
+        <section id="pedidos">
+          <h2>Pedidos e prazos</h2>
+          <ul>
+            <li>Todo pedido começa com um orçamento pelo WhatsApp. Nada é impresso sem a sua confirmação.</li>
+            <li>O prazo depende do tamanho da peça e da fila atual (veja na página inicial).</li>
+            <li id="retirada-txt">Retirada combinada em Itabira.</li>
+            <li>Pagamento combinado no WhatsApp após o orçamento.</li>
+          </ul>
+        </section>
+
+        <section id="contato">
+          <h2>Contato</h2>
+          <ul class="contact-list" id="contact-list"></ul>
+          <a class="btn btn-wa" id="contato-wa" href="#" target="_blank" rel="noopener">Falar no WhatsApp</a>
+        </section>
+
+        <section id="suporte">
+          <h2>Reclamações e suporte</h2>
+          <p>Peça chegou com defeito, quebrou ou não ficou como combinado? Fale com a gente. Tenha em mãos a data do pedido e, se possível, fotos do problema.</p>
+          <a class="btn btn-ghost" id="reclamacao-btn" href="#" target="_blank" rel="noopener">Abrir reclamação no WhatsApp</a>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><strong>Ita 3D</strong><br>Impressão 3D sob demanda · Itabira – MG</div>
+      <div class="footer-links"><a data-wa href="#">WhatsApp</a><a data-insta href="#">Instagram</a><a href="info.html#contato">Contato</a></div>
+      <div>© <span data-year></span> Ita 3D</div>
+    </div>
+  </footer>
+
+  <script src="data/config.js"></script>
+  <script src="data/filamentos.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/info.js"></script>
+</body>
+</html>

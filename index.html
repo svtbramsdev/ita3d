@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' file:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' file: data: blob:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self' file:">
+  <title>Ita 3D · Impressão 3D em Itabira</title>
+  <meta name="description" content="Serviços de impressão 3D em Itabira e região. Envie seu arquivo ou escolha um dos nossos modelos.">
+  <link rel="icon" href="images/logo/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container brand">
+      <a href="index.html"><div class="brand-name">Ita <span>3D</span></div></a>
+      <p class="brand-sub">Serviços de impressão 3D · Itabira e região</p>
+    </div>
+  </header>
+  <nav class="site-nav" aria-label="Principal">
+    <ul class="container">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="modelos.html">Modelos</a></li>
+      <li><a href="enviar.html">Enviar</a></li>
+      <li><a href="pedido.html">Meu pedido</a></li>
+      <li><a href="info.html">Informações</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="container hero">
+      <div>
+        <h1>Traga as suas ideias à <em>vida</em></h1>
+        <p class="lead">Impressão 3D sob encomenda aqui em Itabira. Mande seu arquivo, escolha material e cor, e receba o orçamento pelo WhatsApp.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-lg" href="enviar.html">Envie seu arquivo</a>
+          <a class="link-sub" href="modelos.html">ou escolha algum dos nossos modelos!</a>
+        </div>
+      </div>
+      <div>
+        <div class="carousel" id="carousel">
+          <div class="carousel-track" id="carousel-track"></div>
+          <button class="carousel-nav prev" type="button" aria-label="Foto anterior">&#8249;</button>
+          <button class="carousel-nav next" type="button" aria-label="Próxima foto">&#8250;</button>
+        </div>
+        <div class="carousel-dots" id="carousel-dots"></div>
+      </div>
+    </section>
+
+    <section class="band section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Fila de impressão</h2>
+          <p>Quanto tempo um pedido novo deve levar agora.</p>
+        </div>
+        <div class="queue">
+          <div class="stat"><div class="num" id="fila-pedidos">–</div><div class="lbl">pedidos na fila</div></div>
+          <div class="stat hl"><div class="num" id="fila-prazo">–</div><div class="lbl">prazo estimado para um pedido novo</div></div>
+          <div class="stat"><div class="num" id="fila-atualizado">–</div><div class="lbl">última atualização</div></div>
+        </div>
+        <form class="track" action="pedido.html" method="get" autocomplete="off">
+          <label for="track-c">Já fez um pedido? Acompanhe aqui:</label>
+          <div class="track-row">
+            <input type="text" id="track-c" name="c" placeholder="ITA-XXXX" maxlength="12" autocapitalize="characters" spellcheck="false" required>
+            <button type="submit" class="btn btn-primary">Consultar</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="container section">
+      <div class="section-head">
+        <h2>Como funciona</h2>
+      </div>
+      <ol class="steps">
+        <li><strong>Envie</strong><span>Mande seu arquivo 3D, escolha um modelo do catálogo ou conte sua ideia.</span></li>
+        <li><strong>Escolha</strong><span>Material, cor e qualidade de acordo com o uso da peça.</span></li>
+        <li><strong>Orçamento</strong><span>Confirmamos preço e prazo pelo WhatsApp antes de imprimir.</span></li>
+        <li><strong>Retire</strong><span>Avisamos quando ficar pronto. Retirada ou entrega combinada.</span></li>
+      </ol>
+    </section>
+
+    <section class="container section">
+      <div class="section-head">
+        <h2>Filamentos em estoque</h2>
+        <p>Cores disponíveis agora. Precisa de outra? Pergunte pelo WhatsApp.</p>
+      </div>
+      <div class="fil-grid" id="fil-grid"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><strong>Ita 3D</strong><br>Impressão 3D sob demanda · Itabira – MG</div>
+      <div class="footer-links"><a data-wa href="#">WhatsApp</a><a data-insta href="#">Instagram</a><a href="info.html#contato">Contato</a></div>
+      <div>© <span data-year></span> Ita 3D</div>
+    </div>
+  </footer>
+
+  <script src="data/config.js"></script>
+  <script src="data/filamentos.js"></script>
+  <script src="data/modelos.js"></script>
+  <script src="data/pedidos.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>
