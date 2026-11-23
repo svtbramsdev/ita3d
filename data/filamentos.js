@@ -20,13 +20,13 @@ window.MATERIAIS = {
     "indicado": "Decoração, miniaturas, protótipos, organizadores, peças de uso interno.",
     "pontos": [
       "Melhor acabamento e mais detalhes",
-      "Mais barato",
+      "Impressão consolidada",
       "Amolece com calor (evite carro no sol, água quente)"
     ]
   },
   "PETG": {
     "nome": "PETG",
-    "disponivel": false,
+    "disponivel": true,
     "descricao": "Mais resistente e um pouco flexível. Aguenta melhor calor, umidade e impacto.",
     "indicado": "Peças funcionais, suportes, encaixes, uso externo, peças que ficam no carro.",
     "pontos": [
@@ -35,19 +35,17 @@ window.MATERIAIS = {
       "Acabamento um pouco mais brilhante e menos detalhado"
     ]
   },
-  "PLA-CF": {
-    "nome": "PLA-CF",
-    "disponivel": false,
-    "descricao": "PLA com fibra de carbono: mais rígido, com acabamento fosco. Em breve.",
-    "indicado": "Peças rígidas e leves, acabamento técnico.",
-    "pontos": []
-  },
   "TPU": {
     "nome": "TPU",
     "disponivel": false,
-    "descricao": "",
-    "indicado": "Impressões com elasticidade.",
-    "pontos": []
+    "descricao": "Peças impressas em TPU apresentam as características desse material semelhante à borracha: elasticidade, absorção de impactos, resistência a choques, amortecimento de vibrações e capacidade de alongamento. O TPU é, ainda, um material bastante durável, com alta resistência à abrasão, a produtos químicos, a óleos e a baixas temperaturas, além de apresentar uma resistência moderada à água.",
+    "indicado": "Peças flexíveis, semelhantes à borracha e resistentes a impactos, que filamentos rígidos como PLA ou ABS não conseguem produzir.",
+    "pontos": [
+      "Elasticidade e flexibilidade: O material pode ser esticado, dobrado e comprimido, retornando, em seguida, à sua forma original.",
+      "Durabilidade: Apresenta alta resistência à abrasão, ao desgaste, a óleos e a graxas.",
+      "Absorção de impactos: Amortece vibrações e absorve bem impactos físicos.",
+      "Escalas de dureza: Geralmente medidas na escala Shore A (por exemplo, 85A, 90A, 95A), permitindo escolher graus de flexibilidade mais macios ou um pouco mais rígidos, conforme a necessidade."
+    ]
   }
 };
 
@@ -64,7 +62,7 @@ window.FILAMENTOS = [
     "material": "PLA",
     "cor": "Branco",
     "hex": "#f4f4f2",
-    "emEstoque": false
+    "emEstoque": true
   },
   {
     "id": "pla-cinza",
@@ -97,9 +95,9 @@ window.FILAMENTOS = [
   {
     "id": "petg-preto",
     "material": "PETG",
-    "cor": "Preto",
-    "hex": "#202022",
-    "emEstoque": false
+    "cor": "Branco",
+    "hex": "#ffffff",
+    "emEstoque": true
   },
   {
     "id": "petg-transp",
