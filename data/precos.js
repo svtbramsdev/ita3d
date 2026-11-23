@@ -23,26 +23,66 @@
 
 window.PRECOS = {
   "materiais": {
-    "PLA": { "precoKg": 110, "densidade": 1.24, "fatorVelocidade": 1.0 },
-    "PETG": { "precoKg": 120, "densidade": 1.27, "fatorVelocidade": 0.8 },
-    "PLA-CF": { "precoKg": 180, "densidade": 1.30, "fatorVelocidade": 0.85 }
+    "PLA": {
+      "precoKg": 110,
+      "densidade": 1.24,
+      "fatorVelocidade": 1
+    },
+    "PETG": {
+      "precoKg": 120,
+      "densidade": 1.27,
+      "fatorVelocidade": 0.8
+    },
+    "PLA-CF": {
+      "precoKg": 180,
+      "densidade": 1.3,
+      "fatorVelocidade": 0.85
+    },
+    "TPU": {
+      "precoKg": 120,
+      "densidade": 1.25,
+      "fatorVelocidade": 1
+    }
   },
-  "precoHora": 3.0,
-  "margem": 2.0,
-  "taxaFixa": 5,
+  "precoHora": 3,
+  "margem": 1.5,
+  "taxaFixa": 3,
   "precoMinimo": 10,
-  "faixa": [0.9, 1.15],
-  "multicor": { "adicional": 0.3 },
-  "camadas": { "alta": 0.12, "media": 0.20, "baixa": 0.28 },
-  "fluxo": { "alta": 5.5, "media": 9, "baixa": 12 },
+  "faixa": [
+    0.8,
+    1.05
+  ],
+  "multicor": {
+    "adicional": 0.3
+  },
+  "camadas": {
+    "alta": 0.12,
+    "media": 0.2,
+    "baixa": 0.28
+  },
+  "fluxo": {
+    "alta": 5.5,
+    "media": 9,
+    "baixa": 12
+  },
   "segundosPorCamada": 4,
   "segundosPreparo": 360,
   "larguraLinha": 0.42,
   "fatorSuporte": 1.1,
   "qualidade": {
-    "ornamental": { "paredes": 2, "preenchimento": 0.15 },
-    "funcional": { "paredes": 4, "preenchimento": 0.35 },
-    "esboco": { "paredes": 2, "preenchimento": 0.10 }
+    "ornamental": {
+      "paredes": 2,
+      "preenchimento": 0.15
+    },
+    "funcional": {
+      "paredes": 4,
+      "preenchimento": 0.35
+    },
+    "esboco": {
+      "paredes": 2,
+      "preenchimento": 0.1
+    }
   },
   "mesa": 256
 };
+
