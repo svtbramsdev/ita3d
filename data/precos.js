@@ -29,14 +29,9 @@ window.PRECOS = {
       "fatorVelocidade": 1
     },
     "PETG": {
-      "precoKg": 120,
+      "precoKg": 80,
       "densidade": 1.27,
       "fatorVelocidade": 0.8
-    },
-    "PLA-CF": {
-      "precoKg": 180,
-      "densidade": 1.3,
-      "fatorVelocidade": 0.85
     },
     "TPU": {
       "precoKg": 120,
@@ -44,9 +39,9 @@ window.PRECOS = {
       "fatorVelocidade": 1
     }
   },
-  "precoHora": 3,
+  "precoHora": 0.5,
   "margem": 1.5,
-  "taxaFixa": 3,
+  "taxaFixa": 1.5,
   "precoMinimo": 10,
   "faixa": [
     0.8,
