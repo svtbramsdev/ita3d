@@ -26,7 +26,7 @@ window.MATERIAIS = {
   },
   "PETG": {
     "nome": "PETG",
-    "disponivel": true,
+    "disponivel": false,
     "descricao": "Mais resistente e um pouco flexível. Aguenta melhor calor, umidade e impacto.",
     "indicado": "Peças funcionais, suportes, encaixes, uso externo, peças que ficam no carro.",
     "pontos": [
@@ -41,16 +41,73 @@ window.MATERIAIS = {
     "descricao": "PLA com fibra de carbono: mais rígido, com acabamento fosco. Em breve.",
     "indicado": "Peças rígidas e leves, acabamento técnico.",
     "pontos": []
+  },
+  "TPU": {
+    "nome": "TPU",
+    "disponivel": false,
+    "descricao": "",
+    "indicado": "Impressões com elasticidade.",
+    "pontos": []
   }
 };
 
 window.FILAMENTOS = [
-  { "id": "pla-preto", "material": "PLA", "cor": "Preto", "hex": "#1d1d1f", "emEstoque": true },
-  { "id": "pla-branco", "material": "PLA", "cor": "Branco", "hex": "#f4f4f2", "emEstoque": true },
-  { "id": "pla-cinza", "material": "PLA", "cor": "Cinza", "hex": "#8a8d91", "emEstoque": true },
-  { "id": "pla-vermelho", "material": "PLA", "cor": "Vermelho", "hex": "#c8102e", "emEstoque": true },
-  { "id": "pla-azul", "material": "PLA", "cor": "Azul", "hex": "#1f4fbf", "emEstoque": true },
-  { "id": "pla-laranja", "material": "PLA", "cor": "Laranja", "hex": "#f26b1d", "emEstoque": false },
-  { "id": "petg-preto", "material": "PETG", "cor": "Preto", "hex": "#202022", "emEstoque": true },
-  { "id": "petg-transp", "material": "PETG", "cor": "Transparente", "hex": "#cfe3ea", "emEstoque": true, "obs": "Translúcido: não fica 100% transparente como vidro." }
+  {
+    "id": "pla-preto",
+    "material": "PLA",
+    "cor": "Preto",
+    "hex": "#1d1d1f",
+    "emEstoque": false
+  },
+  {
+    "id": "pla-branco",
+    "material": "PLA",
+    "cor": "Branco",
+    "hex": "#f4f4f2",
+    "emEstoque": false
+  },
+  {
+    "id": "pla-cinza",
+    "material": "PLA",
+    "cor": "Cinza",
+    "hex": "#8a8d91",
+    "emEstoque": true
+  },
+  {
+    "id": "pla-vermelho",
+    "material": "PLA",
+    "cor": "Vermelho",
+    "hex": "#c8102e",
+    "emEstoque": false
+  },
+  {
+    "id": "pla-azul",
+    "material": "PLA",
+    "cor": "Azul",
+    "hex": "#1f4fbf",
+    "emEstoque": false
+  },
+  {
+    "id": "pla-laranja",
+    "material": "PLA",
+    "cor": "Laranja",
+    "hex": "#f26b1d",
+    "emEstoque": false
+  },
+  {
+    "id": "petg-preto",
+    "material": "PETG",
+    "cor": "Preto",
+    "hex": "#202022",
+    "emEstoque": false
+  },
+  {
+    "id": "petg-transp",
+    "material": "PETG",
+    "cor": "Transparente",
+    "hex": "#cfe3ea",
+    "emEstoque": false,
+    "obs": "Translúcido: não fica 100% transparente como vidro."
+  }
 ];
+
