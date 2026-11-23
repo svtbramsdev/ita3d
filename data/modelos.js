@@ -18,48 +18,62 @@
 window.MODELOS = [
   {
     "id": "suporte-celular",
-    "nome": "Suporte de celular",
-    "descricao": "Suporte de mesa com ângulo de leitura. Serve na maioria dos celulares.",
-    "precoAPartirDe": 15,
-    "status": "estoque",
-    "materiais": ["PLA", "PETG"],
-    "foto": "images/modelos/suporte-celular.jpg"
+    "nome": "Suporte de mangueira durável",
+    "descricao": "Arco de 65 graus, orifícios e recortes para reforço otimizado quanto ao uso de filamento.",
+    "precoAPartirDe": 20,
+    "status": "imprimir",
+    "materiais": [
+      "PLA",
+      "PETG"
+    ],
+    "foto": "images/modelos/suporte-celular-mwtp0jbu.jpg"
   },
   {
     "id": "chaveiro-nome",
-    "nome": "Chaveiro com nome",
-    "descricao": "Chaveiro personalizado com nome ou texto curto, em até 2 cores.",
-    "precoAPartirDe": 8,
+    "nome": "10x Presilhas pequenas para saquinhos e outras embalagens",
+    "descricao": "Usar isso principalmente para fechar saquinhos de ervas, mas também é útil para todo tipo de embalagem, como as de cereais matinais, pacotes de chá, etc.\n\nVem 10 presilhas.",
+    "precoAPartirDe": 5,
     "status": "imprimir",
-    "materiais": ["PLA"],
-    "foto": "images/modelos/chaveiro-nome.jpg"
+    "materiais": [
+      "PLA"
+    ],
+    "foto": "images/modelos/chaveiro-nome-mwtpanrb.jpg"
   },
   {
     "id": "vaso-geometrico",
-    "nome": "Vaso geométrico",
-    "descricao": "Vaso decorativo para plantas pequenas ou flores secas.",
-    "precoAPartirDe": 25,
-    "status": "estoque",
-    "materiais": ["PLA", "PETG"],
-    "foto": "images/modelos/vaso-geometrico.jpg"
+    "nome": "Descansos de copo trançados",
+    "descricao": "O aspecto trançado deste porta-copos foi pensado para remeter ao visual de uma cesta. Graças a esse padrão de trançado, o copo fica posicionado cerca de 5 mm acima da base. Isso permite que qualquer condensação escorra facilmente para dentro da trama, mantendo o líquido longe da superfície da mesa.",
+    "precoAPartirDe": 15,
+    "status": "imprimir",
+    "materiais": [
+      "PLA",
+      "PETG"
+    ],
+    "foto": "images/modelos/vaso-geometrico-mwtpgbcw.jpg"
   },
   {
     "id": "organizador-mesa",
-    "nome": "Organizador de mesa",
-    "descricao": "Porta-canetas e objetos com divisórias.",
-    "precoAPartirDe": 30,
+    "nome": "Suporte invisível para controle Xbox One",
+    "descricao": "Projetado para controles de Xbox Series X/S e Xbox One (mesmo com um acessório de teclado conectado), mas, com base no feedback e nos comentários dos usuários, este modelo também é compatível com controles de Xbox 360, DualSense e DualSense Edge para PlayStation 5, Nintendo Switch Pro Controller e controles da PowerA.",
+    "precoAPartirDe": 3,
     "status": "imprimir",
-    "materiais": ["PLA", "PETG"],
-    "foto": "images/modelos/organizador-mesa.jpg"
+    "materiais": [
+      "PLA",
+      "PETG"
+    ],
+    "foto": "images/modelos/organizador-mesa-mwtpstpf.jpg"
   },
   {
     "id": "suporte-headset",
-    "nome": "Suporte de headset",
-    "descricao": "Suporte firme para fones de ouvido grandes.",
-    "precoAPartirDe": 35,
+    "nome": "Tigela de tricô",
+    "descricao": "Esta tigela decorativa apresenta um aspecto de tricô. Tem aproximadamente o tamanho de uma tigela grande para cereais.",
+    "precoAPartirDe": 15,
     "status": "imprimir",
-    "materiais": ["PLA", "PETG"],
-    "foto": "images/modelos/suporte-headset.jpg"
+    "materiais": [
+      "PLA",
+      "PETG"
+    ],
+    "foto": "images/modelos/suporte-headset-mwtpwjfp.jpg"
   },
   {
     "id": "porta-cartoes",
@@ -67,14 +81,25 @@ window.MODELOS = [
     "descricao": "Porta-cartões de visita para balcão.",
     "precoAPartirDe": 12,
     "status": "estoque",
-    "materiais": ["PLA"],
+    "materiais": [
+      "PLA"
+    ],
     "foto": "images/modelos/porta-cartoes.jpg"
   }
 ];
 
 window.DESTAQUES = [
-  { "foto": "images/impressoes/destaque-1.jpg", "legenda": "Peças funcionais em PETG" },
-  { "foto": "images/impressoes/destaque-2.jpg", "legenda": "Impressão multicor" },
-  { "foto": "images/impressoes/destaque-3.jpg", "legenda": "Decoração em PLA" },
-  { "foto": "images/impressoes/destaque-4.jpg", "legenda": "Protótipos sob medida" }
+  {
+    "foto": "images/impressoes/destaque-mwtq2yjm.jpg",
+    "legenda": "Organizador de tampas tupperware"
+  },
+  {
+    "foto": "images/impressoes/destaque-mwtq35r6.jpg",
+    "legenda": "Tripé universal"
+  },
+  {
+    "foto": "images/impressoes/destaque-mwtq3gfa.jpg",
+    "legenda": "Ganchos para roupas"
+  }
 ];
+
