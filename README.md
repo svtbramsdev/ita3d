@@ -22,7 +22,9 @@ ita3d-site/
 │   ├── filamentos/     Optional spool photos
 │   ├── impressoes/     Photos of your prints (home carousel)
 │   ├── modelos/        Catalog model photos
-│   └── logo/           Favicon / logo
+│   └── logo/           Logo: marca.svg (site header), favicon.svg, apple-touch-icon.png,
+│                       perfil.png (WhatsApp/Instagram profile), marca.png / marca-branca.png
+│                       (transparent, for stickers, packaging, labels)
 ├── css/style.css
 └── js/                 Page logic (you shouldn't need to touch this)
 ```
