@@ -14,7 +14,7 @@
 
 window.CONFIG = {
   "nomeLoja": "Ita 3D",
-  "whatsapp": "5531900000000",
+  "whatsapp": "5531996581509",
   "instagram": "",
   "email": "",
   "cidade": "Itabira – MG",
