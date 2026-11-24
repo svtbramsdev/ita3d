@@ -42,7 +42,7 @@ window.PRECOS = {
   "precoHora": 1.5,
   "margem": 1.2,
   "taxaFixa": 3,
-  "precoMinimo": 0,
+  "precoMinimo": 5,
   "faixa": [
     0.8,
     1.05
