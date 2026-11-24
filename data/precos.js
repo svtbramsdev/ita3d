@@ -40,7 +40,7 @@ window.PRECOS = {
     }
   },
   "precoHora": 1.5,
-  "margem": 1.2,
+  "margem": 1.6,
   "taxaFixa": 3,
   "precoMinimo": 5,
   "faixa": [
@@ -57,7 +57,7 @@ window.PRECOS = {
   },
   "fluxo": {
     "alta": 5.5,
-    "media": 9,
+    "media": 6.5,
     "baixa": 12
   },
   "segundosPorCamada": 4,
