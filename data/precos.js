@@ -39,10 +39,10 @@ window.PRECOS = {
       "fatorVelocidade": 1
     }
   },
-  "precoHora": 0.5,
-  "margem": 1,
-  "taxaFixa": 1.5,
-  "precoMinimo": 10,
+  "precoHora": 1.5,
+  "margem": 1.2,
+  "taxaFixa": 3,
+  "precoMinimo": 0,
   "faixa": [
     0.8,
     1.05
