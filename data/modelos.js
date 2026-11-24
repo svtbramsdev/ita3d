@@ -74,6 +74,77 @@ window.MODELOS = [
       "PETG"
     ],
     "foto": "images/modelos/suporte-headset-mwtpwjfp.jpg"
+  },
+  {
+    "id": "modelo-mwtz3055",
+    "nome": "Organizador de mesa e suporte para controle remoto",
+    "descricao": "Cansado de perder seus controles remotos ou de lidar com superfícies bagunçadas? Este suporte para controles remotos é a solução elegante e funcional que você estava procurando. Projetado com foco na versatilidade, este organizador de design sofisticado não serve apenas para controles remotos; ele também é perfeito para manter em ordem a sua mesa de escritório, a bancada do banheiro ou a sua penteadeira.",
+    "precoAPartirDe": 5,
+    "status": "imprimir",
+    "materiais": [
+      "PLA",
+      "PETG"
+    ],
+    "foto": "images/modelos/modelo-mwtz3055-mwtz33v2.jpg"
+  },
+  {
+    "id": "modelo-mwtz94fc",
+    "nome": "Organizador de mesa",
+    "descricao": "Organizador elegante para diversas funcionalidades! Seja na garagem, na cozinha, ou em salas!",
+    "precoAPartirDe": 25,
+    "status": "imprimir",
+    "materiais": [
+      "PLA",
+      "PETG"
+    ],
+    "foto": "images/modelos/modelo-mwtz94fc-mwtz9b7g.jpg"
+  },
+  {
+    "id": "modelo-mwtzcuf0",
+    "nome": "Leque minimalista",
+    "descricao": "Um leque minimalista! Para te salvar nos dias quentes.",
+    "precoAPartirDe": 2,
+    "status": "imprimir",
+    "materiais": [
+      "PLA",
+      "PETG"
+    ],
+    "foto": "images/modelos/modelo-mwtzcuf0-mwtzdqfb.jpg"
+  },
+  {
+    "id": "modelo-mwtzi6nv",
+    "nome": "Suporte para toalha com travamento por gravidade",
+    "descricao": "Uma solução simples para o dia a dia que torna rápido e fácil pendurar e pegar sua toalha.",
+    "precoAPartirDe": 3,
+    "status": "imprimir",
+    "materiais": [
+      "PETG"
+    ],
+    "foto": "images/modelos/modelo-mwtzi6nv-mwtzi9k4.jpg"
+  },
+  {
+    "id": "modelo-mwtznwg0",
+    "nome": "Lavador Automático de Frutas e Vegetais",
+    "descricao": "Lavador automático pra fazer sua cozinha se tornar ainda mais prática!",
+    "precoAPartirDe": 5,
+    "status": "imprimir",
+    "materiais": [
+      "PETG",
+      "PLA"
+    ],
+    "foto": "images/modelos/modelo-mwtznwg0-mwtzo0kb.jpg"
+  },
+  {
+    "id": "modelo-mwtzpimf",
+    "nome": "Porta-lata estilo bota country (473 ml) – Nome editável",
+    "descricao": "Um porta-latas exclusivo para quem ama o estilo de vida sertaneja.\n\nEste modelo tem o formato de uma bota de cowboy, é feito para acomodar latas de 473 ml e conta com um espaço para personalizar com um nome.",
+    "precoAPartirDe": 20,
+    "status": "imprimir",
+    "materiais": [
+      "PLA",
+      "PETG"
+    ],
+    "foto": "images/modelos/modelo-mwtzpimf-mwtzt27y.jpg"
   }
 ];
 
