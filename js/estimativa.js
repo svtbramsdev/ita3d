@@ -241,7 +241,9 @@ window.ItaEstimativa = (function () {
 
     const qtd = Math.max(1, o.qtd || 1);
     const segundos = segPeca * qtd + p.segundosPreparo;
-    const custo = (gramas / 1000) * m.precoKg + (segPeca / 3600) * p.precoHora;
+    const custoFil = (gramas / 1000) * m.precoKg;
+    const custoMaq = (segPeca / 3600) * p.precoHora;
+    const custo = custoFil + custoMaq;
     let unit = custo * p.margem;
     if (o.multicor) unit *= 1 + p.multicor.adicional;
     const preco = Math.max(p.precoMinimo, unit * qtd + p.taxaFixa);
@@ -252,6 +254,10 @@ window.ItaEstimativa = (function () {
       preco,
       min: Math.max(p.precoMinimo, Math.floor(preco * p.faixa[0])),
       max: Math.ceil(preco * p.faixa[1]),
+      // Custo de fabricação (filamento + hora de máquina), sem margem nem taxa fixa
+      custoFilamento: custoFil * qtd,
+      custoMaquina: custoMaq * qtd,
+      custo: custo * qtd,
       multicor: !!o.multicor
     };
   }

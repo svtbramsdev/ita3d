@@ -625,15 +625,21 @@
     const linha = (res, fin, esboco, rotulo) => {
       const r = Est.calcular(simStats, { material: simMat, resolucao: res, finalidade: fin, esboco, multicor: false, qtd: 1, escala: 100 });
       if (!r) return "";
+      const lucro = r.preco - r.custo;
+      const pctLucro = r.preco > 0 ? Math.round((lucro / r.preco) * 100) : 0;
       return "<tr><th>" + rotulo + '</th><td class="num-cell">' + r.gramas.toFixed(1).replace(".", ",") + ' g</td><td class="num-cell">' +
-        Est.fmtTempo(r.segundos) + '</td><td class="num-cell">' + U.brl(r.preco) + '</td><td class="num-cell meta">' + U.brl(r.min) + " – " + U.brl(r.max) + "</td></tr>";
+        Est.fmtTempo(r.segundos) + '</td><td class="num-cell">' + U.brl(r.custo) +
+        '<div class="meta">fil. ' + U.brl(r.custoFilamento) + " · máq. " + U.brl(r.custoMaquina) + "</div>" +
+        '</td><td class="num-cell">' + U.brl(r.preco) + '<div class="meta">site: ' + U.brl(r.min) + " – " + U.brl(r.max) + "</div>" +
+        '</td><td class="num-cell ' + (lucro >= 0 ? "lucro" : "prejuizo") + '">' + U.brl(lucro) + '<div class="meta">' + pctLucro + "% do preço</div></td></tr>";
     };
     let rows = "";
     RES.forEach(([rk, rn]) => QUAL.slice(0, 2).forEach(([qk, qn]) => { rows += linha(rk, qk, false, rn + " · " + qn); }));
     rows += linha("baixa", "ornamental", true, "Esboço");
     out.innerHTML = '<p class="meta" style="margin:0 0 8px">' + s.map((x) => x.toFixed(1).replace(".", ",")).join(" × ") + " mm · " +
       (simStats.volume / 1000).toFixed(1).replace(".", ",") + " cm³ · 1 unidade, incluindo aquecimento</p>" +
-      '<div class="tbl"><table><thead><tr><th>Configuração</th><th>Filamento</th><th>Tempo</th><th>Preço</th><th>Site mostra</th></tr></thead><tbody>' + rows + "</tbody></table></div>";
+      '<div class="tbl"><table><thead><tr><th>Configuração</th><th>Filamento</th><th>Tempo</th><th>Custo</th><th>Preço</th><th>Lucro</th></tr></thead><tbody>' + rows + "</tbody></table></div>" +
+      '<p class="hint" style="margin:8px 0 0">Custo de fabricação = filamento gasto + horas de máquina (energia, desgaste). Lucro = preço − custo, já com a taxa fixa e o preço mínimo.</p>';
   }
 
   // ---------- Renderização ----------

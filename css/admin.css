@@ -109,9 +109,10 @@ input[type="color"] { width: 46px; height: 40px; padding: 3px; border: 1px solid
 .tbl table { min-width: 520px; }
 .tbl td input { min-width: 80px; }
 .tbl td, .tbl th { vertical-align: middle; }
-.sim { display: grid; grid-template-columns: minmax(0, 280px) minmax(0, 1fr); gap: 16px; align-items: start; }
-.sim .viewer { margin-top: 0; aspect-ratio: 1; }
-.sim-drop { display: flex; flex-direction: column; gap: 10px; }
+.sim { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; align-items: start; }
+.sim .viewer { margin-top: 0; aspect-ratio: 1; grid-row: 1 / span 3; }
+.sim-drop { display: grid; grid-template-columns: minmax(0, 240px) minmax(0, 320px); gap: 10px 16px; align-content: start; align-items: start; }
+@media (max-width: 600px) { .sim-drop { grid-template-columns: 1fr; } .sim .viewer { grid-row: auto; } }
 .num-cell { font-variant-numeric: tabular-nums; white-space: nowrap; }
 
 /* Conexão */
@@ -145,3 +146,6 @@ input[type="color"] { width: 46px; height: 40px; padding: 3px; border: 1px solid
   .stats-row .stat { padding: 12px; }
   .stats-row .num { font-size: 1.5rem; }
 }
+.num-cell.lucro { color: var(--ok); font-weight: 600; }
+.num-cell.prejuizo { color: var(--danger); font-weight: 600; }
+.num-cell .meta { font-weight: 400; }
