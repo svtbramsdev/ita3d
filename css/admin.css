@@ -154,3 +154,6 @@ input[type="color"] { width: 46px; height: 40px; padding: 3px; border: 1px solid
 .num-cell.preco-cliente { font-weight: 700; color: var(--accent); }
 .sim-drop .toggle { grid-column: 2; }
 @media (max-width: 600px) { .sim-drop .toggle { grid-column: auto; } }
+/* Visão para o cliente: some o texto do botão e a dica do simulador, para não aparecer no print */
+#sim-cliente:checked + span { display: none; }
+.card:has(#sim-cliente:checked) > .hint { display: none; }

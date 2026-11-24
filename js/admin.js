@@ -565,7 +565,7 @@
         '<p class="hint">Carregue um STL que você já fatiou no Bambu Studio e compare. Os valores mudam na hora enquanto você ajusta os campos abaixo.</p>' +
         '<div class="sim"><div class="sim-drop"><div class="viewer" id="sim-viewer"><div class="viewer-msg" id="sim-msg">' + (simStats ? "Carregue de novo para ver em 3D" : "Nenhum arquivo") + "</div></div>" +
         '<input type="file" id="sim-file" accept=".stl,.3mf,.obj"><label class="fld"><span>Material</span><select id="sim-mat">' + matSel + "</select></label>" +
-          '<label class="toggle"><input type="checkbox" id="sim-cliente"' + (simCliente ? " checked" : "") + '><span>Visão para o cliente (esconde custo e lucro, para tirar print)</span></label></div>' +
+          '<label class="toggle" title="Visão para o cliente"><input type="checkbox" id="sim-cliente"' + (simCliente ? " checked" : "") + '><span>Visão para o cliente (esconde custo e lucro, para tirar print)</span></label></div>' +
         '<div id="sim-out"><div class="empty">Escolha um arquivo STL, 3MF ou OBJ.</div></div></div></section>' +
       '<section class="card"><h2>Preço</h2><div class="form-grid">' +
         fld("Hora de máquina", comUnidade(num(b + ".precoHora", 'min="0"'), "R$/h"), "", "Energia, desgaste, bico, mesa") +
