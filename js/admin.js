@@ -29,7 +29,7 @@
   const saved = {};    // última versão salva (JSON) de cada arquivo
   let uploads = [];    // fotos para enviar: { path, blob }
   const previews = {}; // path -> URL temporária da foto nova
-  let tab = "pedidos", filtroPed = "ativos", simStats = null, simMat = "PLA", busy = false;
+  let tab = "pedidos", filtroPed = "ativos", simStats = null, simMat = "PLA", simNome = "", simCliente = false, busy = false;
 
   // ---------- Utilidades ----------
   const clone = (o) => JSON.parse(JSON.stringify(o));
@@ -290,6 +290,7 @@
     if (el.dataset.upload && e.type === "change") return enviarFoto(el);
     if (el.id === "sim-file" && e.type === "change") return simCarregar(el.files[0]);
     if (el.id === "sim-mat") { simMat = el.value; return simAtualizar(); }
+    if (el.id === "sim-cliente") { simCliente = el.checked; return simAtualizar(); }
     const p = el.dataset.f;
     if (!p) return;
     const viaChange = el.type === "checkbox" || el.tagName === "SELECT" || el.type === "date";
@@ -563,7 +564,8 @@
     return '<section class="card"><h2>Simulador</h2>' +
         '<p class="hint">Carregue um STL que você já fatiou no Bambu Studio e compare. Os valores mudam na hora enquanto você ajusta os campos abaixo.</p>' +
         '<div class="sim"><div class="sim-drop"><div class="viewer" id="sim-viewer"><div class="viewer-msg" id="sim-msg">' + (simStats ? "Carregue de novo para ver em 3D" : "Nenhum arquivo") + "</div></div>" +
-        '<input type="file" id="sim-file" accept=".stl,.3mf,.obj"><label class="fld"><span>Material</span><select id="sim-mat">' + matSel + "</select></label></div>" +
+        '<input type="file" id="sim-file" accept=".stl,.3mf,.obj"><label class="fld"><span>Material</span><select id="sim-mat">' + matSel + "</select></label>" +
+          '<label class="toggle"><input type="checkbox" id="sim-cliente"' + (simCliente ? " checked" : "") + '><span>Visão para o cliente (esconde custo e lucro, para tirar print)</span></label></div>' +
         '<div id="sim-out"><div class="empty">Escolha um arquivo STL, 3MF ou OBJ.</div></div></div></section>' +
       '<section class="card"><h2>Preço</h2><div class="form-grid">' +
         fld("Hora de máquina", comUnidade(num(b + ".precoHora", 'min="0"'), "R$/h"), "", "Energia, desgaste, bico, mesa") +
@@ -612,6 +614,7 @@
     msg.textContent = "Lendo o modelo…";
     window.ItaEstimativa.analisar(file, $("#sim-viewer")).then((a) => {
       simStats = a;
+      simNome = file.name.replace(/\.[^.]+$/, "");
       msg.hidden = true;
       window.ItaEstimativa.setCor("#e8611a");
       simAtualizar();
@@ -625,6 +628,10 @@
     const linha = (res, fin, esboco, rotulo) => {
       const r = Est.calcular(simStats, { material: simMat, resolucao: res, finalidade: fin, esboco, multicor: false, qtd: 1, escala: 100 });
       if (!r) return "";
+      if (simCliente) {
+        return "<tr><th>" + rotulo + '</th><td class="num-cell">' + Math.round(r.gramas) + ' g</td><td class="num-cell">' +
+          Est.fmtTempo(r.segundos) + '</td><td class="num-cell preco-cliente">' + U.brl(r.preco) + "</td></tr>";
+      }
       const lucro = r.preco - r.custo;
       const pctLucro = r.preco > 0 ? Math.round((lucro / r.preco) * 100) : 0;
       return "<tr><th>" + rotulo + '</th><td class="num-cell">' + r.gramas.toFixed(1).replace(".", ",") + ' g</td><td class="num-cell">' +
@@ -636,6 +643,15 @@
     let rows = "";
     RES.forEach(([rk, rn]) => QUAL.slice(0, 2).forEach(([qk, qn]) => { rows += linha(rk, qk, false, rn + " · " + qn); }));
     rows += linha("baixa", "ornamental", true, "Esboço");
+    const medidas = s.map((x) => Math.round(x)).join(" × ") + " mm";
+    if (simCliente) {
+      const loja = (D.config && D.config.CONFIG && D.config.CONFIG.nomeLoja) || "Ita 3D";
+      out.innerHTML = '<div class="orcamento"><div class="orc-head"><img src="images/logo/marca.svg?v=2" alt="" width="40" height="40"><div><strong>Orçamento · ' + E(loja) + "</strong>" +
+        '<div class="meta">' + (simNome ? E(simNome) + " · " : "") + medidas + " · " + E(simMat) + "</div></div></div>" +
+        '<div class="tbl"><table><thead><tr><th>Qualidade</th><th>Filamento</th><th>Tempo de impressão</th><th>Preço</th></tr></thead><tbody>' + rows + "</tbody></table></div>" +
+        '<p class="meta" style="margin:8px 0 0">Valores para 1 unidade. Ornamental: peça decorativa, mais leve. Funcional: paredes e preenchimento reforçados para uso. O prazo de entrega é combinado pelo WhatsApp.</p></div>';
+      return;
+    }
     out.innerHTML = '<p class="meta" style="margin:0 0 8px">' + s.map((x) => x.toFixed(1).replace(".", ",")).join(" × ") + " mm · " +
       (simStats.volume / 1000).toFixed(1).replace(".", ",") + " cm³ · 1 unidade, incluindo aquecimento</p>" +
       '<div class="tbl"><table><thead><tr><th>Configuração</th><th>Filamento</th><th>Tempo</th><th>Custo</th><th>Preço</th><th>Lucro</th></tr></thead><tbody>' + rows + "</tbody></table></div>" +

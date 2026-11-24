@@ -149,3 +149,8 @@ input[type="color"] { width: 46px; height: 40px; padding: 3px; border: 1px solid
 .num-cell.lucro { color: var(--ok); font-weight: 600; }
 .num-cell.prejuizo { color: var(--danger); font-weight: 600; }
 .num-cell .meta { font-weight: 400; }
+.orc-head { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+.orc-head strong { font-size: 1.05rem; }
+.num-cell.preco-cliente { font-weight: 700; color: var(--accent); }
+.sim-drop .toggle { grid-column: 2; }
+@media (max-width: 600px) { .sim-drop .toggle { grid-column: auto; } }
