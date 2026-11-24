@@ -138,7 +138,7 @@ window.MODELOS = [
     "id": "modelo-mwtzpimf",
     "nome": "Porta-lata estilo bota country (473 ml) – Nome editável",
     "descricao": "Um porta-latas exclusivo para quem ama o estilo de vida sertaneja.\n\nEste modelo tem o formato de uma bota de cowboy, é feito para acomodar latas de 473 ml e conta com um espaço para personalizar com um nome.",
-    "precoAPartirDe": 20,
+    "precoAPartirDe": 25,
     "status": "imprimir",
     "materiais": [
       "PLA",
