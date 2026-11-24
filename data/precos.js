@@ -71,7 +71,7 @@ window.PRECOS = {
     },
     "funcional": {
       "paredes": 4,
-      "preenchimento": 0.35
+      "preenchimento": 0.25
     },
     "esboco": {
       "paredes": 2,
