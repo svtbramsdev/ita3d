@@ -106,6 +106,34 @@ window.FILAMENTOS = [
     "hex": "#cfe3ea",
     "emEstoque": false,
     "obs": "Translúcido: não fica 100% transparente como vidro."
+  },
+  {
+    "id": "petg-nova-cor",
+    "material": "PETG",
+    "cor": "Vermelho",
+    "hex": "#ff0000",
+    "emEstoque": false
+  },
+  {
+    "id": "pla-nova-cor",
+    "material": "PLA",
+    "cor": "Madeira",
+    "hex": "#ffb895",
+    "emEstoque": false
+  },
+  {
+    "id": "pla-nova-cor-2",
+    "material": "PLA",
+    "cor": "Marrom",
+    "hex": "#804000",
+    "emEstoque": false
+  },
+  {
+    "id": "petg-nova-cor-2",
+    "material": "PETG",
+    "cor": "Marrom",
+    "hex": "#804000",
+    "emEstoque": false
   }
 ];
 
