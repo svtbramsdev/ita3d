@@ -76,7 +76,7 @@ window.FILAMENTOS = [
     "material": "PLA",
     "cor": "Vermelho",
     "hex": "#c8102e",
-    "emEstoque": false
+    "emEstoque": true
   },
   {
     "id": "pla-azul",
@@ -126,7 +126,7 @@ window.FILAMENTOS = [
     "material": "PLA",
     "cor": "Marrom",
     "hex": "#804000",
-    "emEstoque": false
+    "emEstoque": true
   },
   {
     "id": "petg-nova-cor-2",
@@ -134,6 +134,13 @@ window.FILAMENTOS = [
     "cor": "Marrom",
     "hex": "#804000",
     "emEstoque": false
+  },
+  {
+    "id": "pla-nova-cor-3",
+    "material": "PLA",
+    "cor": "Rosa",
+    "hex": "#ff80c0",
+    "emEstoque": true
   }
 ];
 
